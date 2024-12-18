@@ -1,8 +1,6 @@
 import json
-import paho.mqtt.client as mqtt
-
+from paho.mqtt import client as mqtt
 from typing import Any, List, Dict, Tuple
-
 from app.core.event import eventmanager, Event
 from app.log import logger
 from app.plugins import _PluginBase
