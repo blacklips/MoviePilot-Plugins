@@ -276,10 +276,15 @@ class MqttMsg(_PluginBase):
             return
 
         try:
+            if cover:
+                data = text + "\n\n" + cover
+            else:
+                data = text
+
             if not self._server or not self._port or not self._topic:
                 return False, "参数未配置"
             mqtt_client = MqttClient(server=self._server, port=self._port, topic=self._topic, user=self._user, password=self._password)
-            mqtt_client.send(title=title, message=text, format_as_markdown=True)
+            mqtt_client.send(title=title, message=data, format_as_markdown=True)
 
         except Exception as msg_e:
             logger.error(f"MQTT消息发送失败，错误信息：{str(msg_e)}")
