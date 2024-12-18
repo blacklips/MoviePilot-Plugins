@@ -265,7 +265,9 @@ class MqttMsg(_PluginBase):
         title = msg_body.get("title")
         # 文本
         text = msg_body.get("text")
-
+        # 封面
+        cover = msg_body.get("image")
+        
         if not title and not text:
             logger.warn("标题和内容不能同时为空")
             return
