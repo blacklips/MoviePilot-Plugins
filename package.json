@@ -858,7 +858,8 @@
         "version": "1.0",
         "icon": "Mosquitto_A.png",
         "author": "blacklips",
-        "level": 1
+        "level": 1,
+        "v2": true
     },
     "DingdingMsg": {
         "name": "钉钉机器人",
