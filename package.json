@@ -859,7 +859,7 @@
         "version": "1.0",
         "icon": "Mosquitto_A.png",
         "author": "blacklips",
-        "level": 1,
+        "level": 2,
         "v2": true
     },
     "DingdingMsg": {
